@@ -5,7 +5,6 @@ import requests
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import tokenizer_from_json
-from model_architecture import get_model_architecture
 import math
 
 # --- 토크나이저 불러오기 ---
@@ -147,10 +146,6 @@ def respond(input_text):
 
     if "누구" in input_text:
         return "저는 TriFusionNet이라고 해요. "
-
-
-    if "/detail" in input_text:
-        return get_model_architecture()
 
     if intent == "수학질문":
         return parse_math_question(input_text)
