@@ -1,18 +1,22 @@
 import os
 import gdown
 
+
+import os
+import gdown
+
 # 모델이 없으면 다운로드
 if not os.path.exists("model.h5"):
     print("🔽 모델 다운로드 중...")
-    gdown.download("https://drive.google.com/file/d/1FkFU1NgZiX66b9HYqe5dMviGCFITJjUl", "model.h5", quiet=False)
+    gdown.download("https://drive.google.com/uc?id=1FkFU1NgZiX66b9HYqe5dMviGCFITJjUl", "model.h5", quiet=False)
 
 if not os.path.exists("tokenizer_a.json"):
     print("🔽 모델 다운로드 중...")
-    gdown.download("https://drive.google.com/file/d/1b21GpprC_7rPa-njoyunoD4cm3_Zdxta", "tokenizer_a.json", quiet=False)
+    gdown.download("https://drive.google.com/uc?id=1b21GpprC_7rPa-njoyunoD4cm3_Zdxta", "tokenizer_a.json", quiet=False)
 
 if not os.path.exists("tokenizer_q.json"):
     print("🔽 모델 다운로드 중...")
-    gdown.download("https://drive.google.com/file/d/1C9acvtlZ4iOp3jWf5dBAEQ58X7pYhGvm", "tokenizer_q.json", quiet=False)
+    gdown.download("https://drive.google.com/uc?id=1C9acvtlZ4iOp3jWf5dBAEQ58X7pYhGvm", "tokenizer_q.json", quiet=False)
 
 from flask import Flask, render_template, request, jsonify
 from model import respond  # respond 함수 불러오기
