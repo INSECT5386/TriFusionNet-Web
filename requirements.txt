@@ -1,0 +1,6 @@
+flask
+requests
+gdown  # 모델 다운로드 쓸 거면
+re
+numpy
+json
