@@ -13,8 +13,8 @@ def load_tokenizer(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         return tokenizer_from_json(json.load(f))
 
-tokenizer_q = load_tokenizer('TriFusionNet_tokenizer_q.json')
-tokenizer_a = load_tokenizer('TriFusionNet_tokenizer_a.json')
+tokenizer_q = load_tokenizer('tokenizer_q.json')
+tokenizer_a = load_tokenizer('tokenizer_a.json')
 
 # --- 모델 불러오기 ---
 model = load_model('model.h5', compile=False)
