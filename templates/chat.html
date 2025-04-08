@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TriFusionNet 챗봇</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: auto; padding: 30px; }
+        input[type="text"] { width: 100%; padding: 12px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 10px; }
+        .response { margin-top: 20px; white-space: pre-line; }
+    </style>
+</head>
+<body>
+    <h2>🤖 TriFusionNet 챗봇</h2>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="무엇이든 물어보세요!" required>
+        <button type="submit">보내기</button>
+    </form>
+    <div class="response">{{ response }}</div>
+</body>
+</html>
