@@ -6,6 +6,14 @@ if not os.path.exists("model.h5"):
     print("🔽 모델 다운로드 중...")
     gdown.download("https://drive.google.com/uc?id=★파일ID★", "model.h5", quiet=False)
 
+if not os.path.exists("tokenizer_a.json"):
+    print("🔽 모델 다운로드 중...")
+    gdown.download("https://drive.google.com/uc?id=★파일ID★", "tokenizer_a.json", quiet=False)
+
+if not os.path.exists("tokenizer_q.json"):
+    print("🔽 모델 다운로드 중...")
+    gdown.download("https://drive.google.com/uc?id=★파일ID★", "tokenizer_q.json", quiet=False)
+
 from flask import Flask, render_template, request, jsonify
 from model import respond  # respond 함수 불러오기
 
